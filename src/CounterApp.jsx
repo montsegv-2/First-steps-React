@@ -4,10 +4,18 @@ import PropTypes from 'prop-types';
 
 export const CounterApp = ({value}) => {
   
-  const [ counter, setCounter ] = useState(10);
+  const [ counter, setCounter ] = useState(value);
 
   const handleAdd = () => {
-    setCounter( counter + 2);
+    setCounter( counter + 1);
+  }
+
+  const handleSubstract = () => {
+    setCounter( counter - 1 )
+  }
+
+  const handleReset = () => {
+    setCounter(value);
   }
 
   return (
@@ -18,6 +26,8 @@ export const CounterApp = ({value}) => {
         <button onClick={ handleAdd }>
             +1
         </button>
+        <button onClick={ handleSubstract }> -1 </button>
+        <button onClick={ handleReset }> Reset </button>
     </>
   )
 }
