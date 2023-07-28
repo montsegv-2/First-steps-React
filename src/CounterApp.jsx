@@ -11,7 +11,7 @@ export const CounterApp = ({value}) => {
   }
 
   const handleSubstract = () => {
-    setCounter( counter - 1 )
+    setCounter( counter - 1 );
   }
 
   const handleReset = () => {
